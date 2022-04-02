@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-family: 'Barlow', sans-serif; font-size: 18px; line-height: 1.5em; }
+
+body{  display: block; min-height: 100vh;  text-rendering: optimizeSpeed;  margin: 0; padding: 0; }
+
+.Container{}
+    .Header{display: block; background: url("./images/mobile/image-header.jpg") center/cover no-repeat; height: 70vh; width: 100%;
+    @media (min-width:650px) {background: url("./images/desktop/image-header.jpg") center/cover no-repeat;}}
+        .NavigationBar{display: flex; align-items: center; justify-content: space-between;}
+        .Logo{display: block;
+         img{ margin: 2rem 1rem; } }
+        .ToggleButton{ margin: 2rem 1rem; height: 1.5rem; background: transparent; border: none; opacity: 0.7;
+            @media (min-width:650px){display: none;}} 
+         .NavigationMobile{display: none; align-items: center; flex-direction: column; justify-content: center; background: hsl(0, 0%, 100%); width: 90%;max-width: 20rem; margin: 0 auto; clip-path: polygon(93% 8%, 100% 0%, 100% 100%, 0 100%, 0 8%); padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .Active{display: flex;}
+        .NavigationItems{display: block; list-style-type: none; padding: 0;}
+        .NavigationItem{}
+            .NavigationLink{display: block; text-decoration: none; color:  hsl(210, 4%, 67%); line-height: 3rem; text-align: center; }
+            .NavigationLink.last{ background:  hsl(51, 100%, 49%); padding:0.2rem 2rem; border-radius: 2rem; color: #000 ; text-transform: uppercase; font-family: 'Fraunces', sans-serif;font-weight: 700; margin-top: 1rem;} 
+        .NavigationDesktop{ display: none;
+            @media (min-width:650px){display: block;}
+        }
+            .NavigationItemsDesktop{
+                @media (min-width:650px){display: flex; align-items: center; justify-content: center; list-style-type: none; width: 30rem; padding-right: 1rem; padding-left: 0;}}
+                .NavigationItemDesktop{margin: 0 1rem;}
+                    .NavigationLinkDesktop{display: block; text-decoration: none; color:  hsl(0, 0%, 100%); line-height: 2rem; text-align: center;}
+                    .lastDesktop{background:hsl(0, 0%, 100%) ;  color: hsl(212, 27%, 19%); border-radius: 2rem; padding: 0.2rem 1rem; text-transform: uppercase; font-family: 'Fraunces', sans-serif;font-weight: 800; font-size: 0.8rem;
+                    &:hover{background: rgba(255,255,255,0.3); color:hsl(0, 0%, 100%)  ;}}
+           
+        .PageTitle{display: flex; flex-direction: column; justify-content:center;  align-items:center; }
+            .Title{display: block; text-align: center; color: hsl(0, 0%, 100%); text-transform: uppercase; font-size: 2.5rem; line-height: 3rem; letter-spacing: 0.3rem; font-weight: 800; font-family: 'Fraunces', sans-serif;  }
+            .Arrow{display: block;  color: hsl(0, 0%, 100%);  margin:7rem; height: 8rem;
+                @media (min-width:650px) {margin:2rem; } }
+            .Inactive{display: none;}
+    .MainSection{}
+        .FirstSection{  display: flex; align-items: center; justify-content: center;flex-direction: column;
+            @media (min-width:650px) {  flex-direction: row-reverse; }}
+        .BlockImage img{ width: 100%;
+            @media (min-width:650px) {height: 30rem;}  }
+        .BlockImage{
+            @media (min-width:650px) {width: 50%; height: 30rem;} 
+        }
+        .Feature{display: flex; flex-direction: column; align-items: center; justify-content: center;  padding: 5rem 1rem; text-align: center; background: rgba(254, 120, 103, 0.08);
+            @media (min-width:650px) {width: 50%; height: 30rem; } }
+            .FeatureTitle{display: block; font-weight: 800; font-family: 'Fraunces', sans-serif; font-size: 1.7rem; line-height: 2rem; color: hsl(212, 27%, 19%);}
+            .FeatureDescription{ display: block;color:  hsl(210, 4%, 67%); padding: 0 0.5rem;}
+            .FeatureCTA{ margin-top: 1rem; color:hsl(212, 27%, 19%); text-decoration: none; text-transform: uppercase;font-weight: 800; font-family: 'Fraunces', sans-serif; border-bottom: 10px solid rgba(250, 212, 0, 0.5) ; border-bottom-left-radius:0.5rem; border-bottom-right-radius:0.5rem;
+            &:hover{border-color: hsl(51, 100%, 49%);} }
+               .FeatureCTA.last {border-bottom: 10px solid rgba(254, 120, 103, 0.2);
+                &:hover{border-color: rgba(254, 120, 103, 0.6);} }
+         .SecondSection{display: flex; align-items: center; justify-content: center;flex-direction: column;
+            @media (min-width:650px) {  flex-direction: row; }}
+        .ThirdSection{  display: flex; align-items: center; justify-content: center; flex-direction: column;
+                @media (min-width:650px) {  flex-direction: row; }}
+        .Services{display: flex; flex-direction: column; align-items: center; justify-content: center;
+            @media (min-width:650px) { flex-direction: row; } }
+            .GraphicDesign{display: flex;  background: url("./images/mobile/image-graphic-design.jpg") center/cover no-repeat; height: 70vh; width: 100%; justify-content: flex-end; flex-direction: column; align-items: center; padding-bottom: 2rem; color:hsl(167, 40%, 24%) ;
+                @media (min-width:650px) { width: 50%; } }
+               .GraphicDesignTitle{display: block;  font-weight: 800; font-family: 'Fraunces', sans-serif;  font-size: 2rem;}
+            .GraphicDesignDescription{display: block; padding: 0 2rem; text-align: center;}
+            .Photography{display: flex;  background: url("./images/mobile/image-photography.jpg") center/cover no-repeat; height: 70vh; width: 100%; justify-content: flex-end; flex-direction: column; align-items: center; padding-bottom: 2rem; color:hsl(198, 62%, 26%) ;
+                @media (min-width:650px) { width: 50%; } 
+            }
+               .PhotographyTitle{display: block;  font-weight: 800; font-family: 'Fraunces', sans-serif;  font-size: 2rem;}
+               .PhotographyDescription{display: block; padding: 0 2rem; text-align: center;}
+        .Testimonials{display: block; padding: 1rem; text-align: center; background: rgba(254, 120, 103, 0.08); font-size: 0.8rem; }
+        .TestimonialsReviews{  
+             @media (min-width:650px) { display: flex; align-items: flex-start; justify-content: center; padding: 2rem;}}
+            .TestimonialsTitle{display: block; color:hsl(210, 4%, 67%); text-transform: uppercase; font-weight: 700; font-family: 'Fraunces', sans-serif; letter-spacing: 0.3rem; margin-top: 2rem;}
+            .Testimonial{margin-top: 1rem;
+                @media (min-width:650px) { margin: 2rem;}}
+                .TestimonialImage{border-radius: 50%; width: 5rem; margin-top: 2rem;}
+                .TestimonialDescription{color: hsl(213, 9%, 39%); display: block; text-align: center; font-size: 1rem;}
+                .TestimonialAuthor{color:hsl(212, 27%, 19%); font-weight: 800; font-family: 'Fraunces', sans-serif; margin: 0; font-size: 1rem;}
+                .TestimonialPosition{ color:hsl(210, 4%, 67%); margin: 0; font-size: 0.8rem;}
+            
+    .Footer{background: rgba(69, 140, 126, 0.5); color: hsl(168, 34%, 41%);padding-bottom: 2rem;
+        &:hover{color:hsl(0, 0%, 100%)}
+ }
+        .FooterImageContainer{display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+            @media (min-width:650px) {flex-wrap: nowrap;  }}
+        .FooterImageContainer img{width: 50%;}
+        .FooterFirstSection{ display: flex;  align-items: center; justify-content: center; }
+        .FooterSecondSection{ display: flex;  align-items: center; justify-content: center; }
+        .FooterNavigation{margin:3rem; text-align: center; }
+        .FooterNav{display: flex;align-items: center; justify-content: center;}
+            .FooterNavItems{list-style-type: none; display: flex;align-items: center; justify-content: space-between; padding: 0;}
+               .FooterNavItem{display: block; margin: 1rem;}
+                    .FooterNavLink{ color: hsl(168, 34%, 41%); text-decoration: none;
+                        &:hover{color:hsl(0, 0%, 100%)}}
+            .SocialIcons{display: flex; align-items: center; justify-content: space-around; margin: 3rem;
+          
+                @media (min-width:650px) { justify-content: center;}}
+            .SocialIcons img{ margin-left: 2rem;  }
+            .SocialIcons a img { 
+                &:hover{color:hsl(0, 0%, 100%)}
+            }
